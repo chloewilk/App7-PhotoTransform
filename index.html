@@ -33,6 +33,7 @@
  <head>
   <meta charset="utf-8">
   <title>Photo Transform</title>
+  <!-- Scaling/mobile device resizing !-->
   <meta name="viewport" content="width=device-width, initial-scale=.7">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
@@ -40,6 +41,7 @@
   <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
  <script>
+  // Log the HTML file's last modified timesstamp, to make it easier to debug/load page
   var docMod = document.lastModified; // gets last modified date and time of the index.html file
   console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
 
@@ -47,7 +49,7 @@
 */
  function detectVerticalSquash(img) {
   var iw = img.naturalWidth, ih = img.naturalHeight;
-  var canvas = document.createElement('canvas');
+  var canvas = document.createElement('canvas'); // Defines variable of the first canvas
   canvas.width = 1;
   canvas.height = ih;
   var ctx = canvas.getContext('2d');
