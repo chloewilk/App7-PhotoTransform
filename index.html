@@ -71,6 +71,7 @@
   var ratio = (py / ih);
   return (ratio===0)?1:ratio;
  }
+  // Border around drawImage that applies vertical squash fix for iOS. if the image is from another source outside of iOS there will be no change.
 
  function drawImageIOSFix(ctx, img, sx, sy, sw, sh, dx, dy, dw, dh) {
   var vertSquashRatio = detectVerticalSquash(img);
