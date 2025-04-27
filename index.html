@@ -126,6 +126,13 @@
         // Load the image data as the source
         img.src = event.target.result;
         };
+
+       // Read file input as a data URL
+       reader.readAsDataUrl(file);
+      } else { 
+     // Inform user in case they selected a file that was not an image
+     messageDisplayArea.innerHTML
+     'File not supported- please use an image file';
       
           
           
