@@ -125,16 +125,7 @@
         };
         // Load the image data as the source
         img.src = event.target.result;
-        };
-
-       // Read file input as a data URL
-       reader.readAsDataUrl(file);
-      } else { 
-     // Inform user in case they selected a file that was not an image
-     messageDisplayArea.innerHTML
-     'File not supported- please use an image file';
-      
-          
+        };       
           
         } // end of img.onload
         
@@ -164,7 +155,8 @@
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
       <div id="messageDisplayArea"></div>
-      
+
+     <!-- Canvas for displaying the original image !-->
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
@@ -173,6 +165,11 @@
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
+
+     <!-- Canvas for displaying the blue image !-->
+     <canvas id="dataCanvas" width="600" height="500"
+              style="border:1px solid #d3d3d3;
+                     vertical-align:top;"></canvas>
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
